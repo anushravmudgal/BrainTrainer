@@ -18,6 +18,17 @@
         android:textSize="24sp" />
 
     <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="558dp"
+        android:text="0 / 0"
+        android:textSize="24sp" />
+
+    <TextView
         android:id="@+id/ques"
         android:layout_width="277dp"
         android:layout_height="60dp"
@@ -27,19 +38,110 @@
         android:layout_marginStart="64dp"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="475dp"
+        android:background="#00FFFFFF"
         android:gravity="center|center_horizontal"
         android:text="TextView"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="30sp" />
 
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="277dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="86dp"
+        android:gravity="center|center_horizontal"
+        android:textSize="24sp" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gd"
+        android:layout_width="256dp"
+        android:layout_height="271dp"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="173dp"
+        android:alpha="1"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="2">
+
+
+        <TextView
+            android:id="@+id/q1"
+            android:layout_width="131dp"
+            android:layout_height="133dp"
+            android:background="@android:color/holo_red_dark"
+            android:gravity="center"
+            android:onClick="click"
+            android:tag="1"
+            android:text="TextView"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/q2"
+            android:layout_width="131dp"
+            android:layout_height="133dp"
+            android:background="#43A047"
+            android:gravity="center"
+            android:onClick="click"
+            android:tag="2"
+            android:text="TextView"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/q3"
+            android:layout_width="131dp"
+            android:layout_height="133dp"
+            android:background="#00ACC1"
+            android:gravity="center"
+            android:onClick="click"
+            android:tag="3"
+            android:text="TextView"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/q4"
+            android:layout_width="131dp"
+            android:layout_height="133dp"
+            android:background="#FDD835"
+            android:gravity="center"
+            android:onClick="click"
+            android:tag="4"
+            android:text="TextView"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp"
+            app:layout_column="1"
+            app:layout_row="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/pg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="165dp"
-        android:layout_marginBottom="391dp"
-        android:onClick="click"
-        android:text="Button" />
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="27dp"
+        android:onClick="playagain"
+        android:text="Play again"
+        android:visibility="invisible" />
 
 </RelativeLayout>
